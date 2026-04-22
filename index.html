@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sobre a Flura</title>
+
+  <style>
+
+	/* MENU */
+	.navbar {
+	  display: flex;
+	  justify-content: space-between;
+	  align-items: center;
+	  background: #f5f5f5;
+	  padding: 10px 20px;
+	}
+
+	.logo {
+	  font-weight: bold;
+	  font-size: 20px;
+	}
+	
+	.logo img {
+	  height: 40px;
+	  width: auto;
+	  display: block;
+	}
+
+	.menu {
+	  list-style: none;
+	  display: flex;
+	  gap: 20px;
+	}
+
+	.menu li {
+	  position: relative;
+	}
+
+	.menu a {
+	  text-decoration: none;
+	  color: #333;
+	  padding: 8px 12px;
+	}
+
+	.menu a.active {
+	  background: #333;
+	  color: white;
+	  border-radius: 4px;
+	}
+
+	/* Dropdown */
+	.dropdown-menu {
+	  display: none;
+	  position: absolute;
+	  top: 35px;
+	  left: 0;
+	  background: white;
+	  list-style: none;
+	  padding: 10px;
+	  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+	}
+
+	.dropdown:hover .dropdown-menu {
+	  display: block;
+	}
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      margin: 0;
+      background: #f7f7f7;
+      color: #111;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    h1, h2 {
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      font-size: 36px;
+    }
+
+    h2 {
+      font-size: 26px;
+      margin-top: 40px;
+    }
+
+    p {
+      font-size: 18px;
+      color: #444;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 80px 20px 40px;
+      background: #fff;
+    }
+
+    .hero p {
+      max-width: 700px;
+      margin: auto;
+      font-size: 20px;
+    }
+
+    .highlight {
+      background: #000;
+      color: #fff;
+      padding: 4px 8px;
+      border-radius: 6px;
+    }
+
+    .grid {
+      display: grid;
+      gap: 24px;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      margin-top: 30px;
+    }
+
+    .card {
+      background: #fff;
+      padding: 24px;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+    }
+
+    .tag {
+      display: inline-block;
+      font-size: 12px;
+      padding: 4px 10px;
+      background: #eee;
+      border-radius: 20px;
+      margin-bottom: 10px;
+    }
+
+    .section {
+      margin-top: 60px;
+    }
+
+    .quote {
+      font-size: 22px;
+      font-weight: 500;
+      text-align: center;
+      margin: 60px 0;
+    }
+
+    .cta {
+      background: #000;
+      color: #fff;
+      text-align: center;
+      padding: 60px 20px;
+      border-radius: 16px;
+      margin-top: 60px;
+    }
+
+    .cta a {
+      display: inline-block;
+      margin-top: 20px;
+      background: #fff;
+      color: #000;
+      padding: 14px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+	
+    /* ===== NOVO TOPO ===== */
+    .topo {
+      background: #eee;
+      text-align: center;
+      padding: 80px 20px 60px;
+    }
+
+    .topo img {
+      width: 120px;
+      margin-bottom: 20px;
+    }
+
+    .topo h1 {
+      font-size: 48px;
+      margin: 10px 0;
+      letter-spacing: 2px;
+    }
+
+    .topo h2 {
+      font-size: 22px;
+      font-weight: 400;
+      color: #555;
+      margin-bottom: 40px;
+    }
+
+    .topo p {
+      max-width: 900px;
+      margin: auto;
+      font-size: 20px;
+      color: #444;
+    }
+
+    /* ===== NOVO FOOTER ===== */
+    footer {
+      background: #eee;
+      text-align: center;
+      padding: 30px 20px;
+      font-size: 16px;
+      color: #555;
+      margin-top: 60px;
+    }	
+
+  </style>
+</head>
+
+
+<body>
+
+    <!-- ===== MENU ===== -->
+	<header class="navbar">
+	  <div class="logo">
+		  <a href="/">
+			<img src="/img/flura-logo.png" alt="Flura Logo">
+		  </a>
+	  </div>
+
+	  <nav>
+		<ul class="menu">
+		  <li><a href="/" class="active">Home</a></li>
+		  <li><a href="/flura-quem-somos.html">Quem somos</a></li>
+		  <li><a href="/flura-solucoes.html">Soluções</a></li>
+
+		  <li class="dropdown">
+			<a href="#">Quiz ▾</a>
+			<ul class="dropdown-menu">
+			  <li><a href="/flura-quiz.html">Como funciona</a></li>
+			  <li><a href="/flura-quiz-responder.html">Responder</a></li>
+			</ul>
+		  </li>
+
+		  <li><a href="/ecommerce/">E-Commerce</a></li>
+		</ul>
+	  </nav>
+	</header>
+
+  <!-- ===== TOPO NOVO ===== -->
+  <section class="topo">
+
+    <h1>FLURA</h1>
+    <h2>Neurodiversidade com propósito</h2>
+
+    <p>
+      Somos um portfólio de soluções para a neurodiversidade, com produtos,
+      conteúdos e orientações de autoconhecimento para apoiar o bem-estar
+      e tornar o dia a dia mais leve.
+    </p>
+  </section>
+  
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <h1>Um jeito melhor de funcionar.</h1>
+      <p>
+        A Flura empodera uma ideia simples:
+        <br><br>
+        <span class="highlight">cada mente funciona de um jeito diferente — e merece soluções adaptadas para isso.</span>
+      </p>
+      <p>
+<br><br>
+        Produtos, conteúdos educativos e kits organizados para apoiar diferentes formas de funcionamento, promovendo bem-estar, clareza e mais autonomia no dia a dia.
+      </p>
+
+    </div>
+  </section>
+
+  <!-- PROBLEMA -->
+  <section class="container section">
+    <h2>Nem tudo funciona para todas as mentes — e tudo bem</h2>
+    <p>
+      Pessoas neurodivergentes passam a vida tentando se adaptar a ferramentas que não foram feitas para elas.
+    </p>
+
+    <div class="grid">
+      <div class="card">
+        <div class="tag">Sobrecarga sensorial</div>
+        <p>Ambientes, produtos e estímulos que cansam mais do que ajudam.</p>
+      </div>
+
+      <div class="card">
+        <div class="tag">Foco e execução</div>
+        <p>Muita informação, pouca estrutura prática.</p>
+      </div>
+
+      <div class="card">
+        <div class="tag">Ansiedade e regulação</div>
+        <p>Falta de ferramentas simples para autorregulação no dia a dia.</p>
+      </div>
+
+      <div class="card">
+        <div class="tag">Educação genérica</div>
+        <p>Conteúdo que não considera diferentes formas de aprender.</p>
+      </div>
+    </div>
+
+    <p style="margin-top: 30px;">
+      A Flura organiza soluções a partir de três pilares: <strong>neurodiversidade, bem-estar e educação.</strong>
+	  <br>
+      Assim, cada recomendação faz sentido para você — não para um padrão.
+    </p>
+  </section>
+
+  <!-- SOLUÇÃO -->
+  <section class="container section">
+    <h2>A proposta da Flura</h2>
+
+    <p>
+      A Flura não é só um e-commerce.
+      <br><br>
+      É um portfólio que conecta <strong>perfil neurodivergente → necessidades → soluções práticas</strong>.
+      <br>O que fazemos?
+    </p>
+
+    <div class="grid">
+      <div class="card">
+        <h3>1. Entender você</h3>
+        <p>
+          Um quiz inteligente identifica padrões como sensibilidade, foco, energia e estilo cognitivo.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>2. Traduzir isso em necessidades</h3>
+        <p>
+          Em vez de rótulos, usamos situações reais: concentração, descanso, organização, estímulo.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>3. Recomendar soluções</h3>
+        <p>
+          Produtos, ferramentas e conteúdos que fazem sentido para o seu funcionamento — não para o “padrão”.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIFERENCIAL -->
+  <section class="container section">
+    <h2>O que torna a Flura diferente</h2>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Curadoria guiada por perfil</h3>
+        <p>Você não precisa pesquisar tudo. A Flura filtra por você.</p>
+      </div>
+
+      <div class="card">
+        <h3>Produtos com contexto</h3>
+        <p>Não é só “o que é”, mas “quando usar” e “por que funciona”.</p>
+      </div>
+
+      <div class="card">
+        <h3>Foco em bem-estar real</h3>
+        <p>Menos performance tóxica. Mais funcionalidade sustentável.</p>
+      </div>
+
+      <div class="card">
+        <h3>Educação aplicada</h3>
+        <p>Conteúdos que ajudam na prática — não só teoria.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- POSICIONAMENTO -->
+  <section class="container">
+    <div class="quote">
+      “Você não precisa funcionar como todo mundo.<br>
+      Você precisa de um sistema que funcione para você.”
+    </div>
+  </section>
+
+  <!-- PARA QUEM É -->
+  <section class="container section">
+    <h2>Para quem é a Flura</h2>
+
+    <div class="grid">
+      <div class="card">
+        <div class="tag">TDAH</div>
+        <p>Organização, foco e redução de sobrecarga mental.</p>
+      </div>
+
+      <div class="card">
+        <div class="tag">Autismo</div>
+        <p>Regulação sensorial e previsibilidade.</p>
+      </div>
+
+      <div class="card">
+        <div class="tag">Ansiedade</div>
+        <p>Ferramentas para desacelerar e recuperar controle.</p>
+      </div>
+
+      <div class="card">
+        <div class="tag">Alta sensibilidade</div>
+        <p>Ambientes e produtos mais suaves e equilibrados.</p>
+      </div>
+    </div>
+
+    <p style="margin-top: 30px;">
+      Ou simplesmente para quem sente que o mundo pede um funcionamento que não é o seu.
+    </p>
+  </section>
+
+  <!-- CTA -->
+  <section class="container">
+    <div class="cta">
+      <h2>Descubra o que funciona para você</h2>
+      <h4>Em poucos minutos, você recebe recomendações personalizadas para o seu perfil.</h4>
+
+      <a href="https://www.flura.com.br/quiz/quiz-etapas">Começar agora</a>
+    </div>
+  </section>
+  
+  <!-- ===== FOOTER NOVO ===== -->
+  <footer>
+    © Flura — Neurodiversidade com propósito
+  </footer>  
+
+</body>
+</html>

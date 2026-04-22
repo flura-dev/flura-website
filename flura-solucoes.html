@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flura — Flua como você é</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #FAFAF8;
+  color: #222;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 24px;
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+p {
+  color: #555;
+}
+
+.btn {
+  display: inline-block;
+  padding: 14px 22px;
+  background: #222;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.section {
+  padding: 60px 20px;
+}
+
+.light {
+  background: #F2F4F3;
+}
+
+.grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  margin-top: 30px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #eee;
+}
+
+.cta-center {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.quiz {
+  display: none;
+  max-width: 500px;
+  margin: auto;
+  text-align: center;
+}
+
+.quiz button {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #eee;
+  cursor: pointer;
+}
+
+.result {
+  display: none;
+  text-align: center;
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="section">
+  <div class="container">
+    <h1>Flua como você é 🌿</h1>
+    <p style="text-align:center; max-width:600px; margin:auto;">
+      Tudo fica mais fácil quando você usa ferramentas adaptadas ao seu jeito.
+    </p>
+
+    <div class="cta-center">
+      <button class="btn" onclick="startQuiz()">Descobrir o que funciona para mim</button>
+    </div>
+  </div>
+</section>
+
+<!-- QUIZ -->
+<section class="section light">
+  <div class="container">
+
+    <div id="quiz" class="quiz">
+      <h2>Como você está se sentindo agora?</h2>
+
+      <button onclick="answer('calma')">Sobrecarregado / muitos estímulos</button>
+      <button onclick="answer('foco')">Disperso / dificuldade de foco</button>
+      <button onclick="answer('descanso')">Cansado / sem energia</button>
+      <button onclick="answer('clareza')">Confuso / querendo entender melhor</button>
+    </div>
+
+    <div id="result" class="result">
+      <h2 id="resultTitle"></h2>
+      <p id="resultText"></p>
+
+      <div class="cta-center">
+        <a href="https://www.flura.com.br/e-commerce" class="btn">Ver soluções no e-commerce</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- MOODS -->
+<section class="section">
+  <div class="container">
+    <h2>Explore pelo seu momento</h2>
+
+    <div class="grid">
+      <div class="card">
+        <h3>🌿 Calma</h3>
+        <p>Reduzir estímulos e encontrar equilíbrio</p>
+      </div>
+
+      <div class="card">
+        <h3>🎯 Foco</h3>
+        <p>Organizar pensamentos e manter atenção</p>
+      </div>
+
+      <div class="card">
+        <h3>🌙 Descanso</h3>
+        <p>Recuperar energia e desacelerar</p>
+      </div>
+
+      <div class="card">
+        <h3>🧠 Clareza</h3>
+        <p>Entender melhor como você funciona</p>
+      </div>
+    </div>
+
+    <div class="cta-center">
+      <a href="https://www.flura.com.br/e-commerce" class="btn">Explorar no e-commerce</a>
+    </div>
+  </div>
+</section>
+
+<!-- SOLUÇÕES / KITS -->
+<section class="section light">
+  <div class="container">
+    <h2>Soluções pensadas para você</h2>
+
+    <div class="grid">
+
+      <div class="card">
+        <h3>Kit Calma 🌿</h3>
+        <p>Itens para reduzir estímulos e trazer mais conforto sensorial.</p>
+      </div>
+
+      <div class="card">
+        <h3>Kit Foco 🎯</h3>
+        <p>Ferramentas para organização e atenção no dia a dia.</p>
+      </div>
+
+      <div class="card">
+        <h3>Kit Descanso 🌙</h3>
+        <p>Recursos para desacelerar e recuperar energia.</p>
+      </div>
+
+      <div class="card">
+        <h3>Kit Clareza 🧠</h3>
+        <p>Conteúdos e guias para entender melhor seu funcionamento.</p>
+      </div>
+
+    </div>
+
+    <div class="cta-center">
+      <a href="https://www.flura.com.br/e-commerce" class="btn">Comprar no e-commerce</a>
+    </div>
+  </div>
+</section>
+
+<!-- COMO FUNCIONA -->
+<section class="section">
+  <div class="container">
+    <h2>Como funciona</h2>
+
+    <div class="grid">
+      <div class="card">
+        <h3>1. Entenda seu momento</h3>
+        <p>Responda o quiz ou explore por categorias</p>
+      </div>
+
+      <div class="card">
+        <h3>2. Descubra soluções</h3>
+        <p>Veja recomendações pensadas para você</p>
+      </div>
+
+      <div class="card">
+        <h3>3. Compre com clareza</h3>
+        <p>Finalize sua escolha no nosso e-commerce</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="section light">
+  <div class="container">
+    <h2>Seu jeito pode ser mais leve</h2>
+    <p style="text-align:center;">
+      Com as ferramentas certas, tudo pode fluir melhor.
+    </p>
+
+    <div class="cta-center">
+      <a href="https://www.flura.com.br/e-commerce" class="btn">Acessar e-commerce</a>
+    </div>
+  </div>
+</section>
+
+<footer style="text-align:center; padding:40px; color:#777;">
+  Flura © 2026 — Feito para fluir com você
+</footer>
+
+<script>
+function startQuiz() {
+  document.getElementById("quiz").style.display = "block";
+  document.getElementById("result").style.display = "none";
+}
+
+function answer(type) {
+  let title = "";
+  let text = "";
+
+  if(type === "calma") {
+    title = "Você pode se beneficiar de mais calma 🌿";
+    text = "Ambientes com menos estímulos ajudam a reduzir sobrecarga.";
+  }
+
+  if(type === "foco") {
+    title = "Vamos melhorar seu foco 🎯";
+    text = "Ferramentas simples podem ajudar na sua organização.";
+  }
+
+  if(type === "descanso") {
+    title = "Seu corpo pede descanso 🌙";
+    text = "Pausas e conforto fazem diferença no seu dia.";
+  }
+
+  if(type === "clareza") {
+    title = "Buscando mais clareza 🧠";
+    text = "Entender como você funciona muda tudo.";
+  }
+
+  document.getElementById("quiz").style.display = "none";
+  document.getElementById("result").style.display = "block";
+
+  document.getElementById("resultTitle").innerText = title;
+  document.getElementById("resultText").innerText = text;
+}
+</script>
+
+</body>
+</html>
