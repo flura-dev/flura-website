@@ -6,6 +6,49 @@
 <title>Flura - Quem somos</title>
 
 <style>
+
+	/* MENU */
+	.navbar {
+	  display: flex;
+	  justify-content: space-between;
+	  align-items: center;
+	  background: #f5f5f5;
+	  padding: 10px 20px;
+	}
+
+	.logo {
+	  font-weight: bold;
+	  font-size: 20px;
+	}
+	
+	.logo img {
+	  height: 40px;
+	  width: auto;
+	  display: block;
+	}
+
+	.menu {
+	  list-style: none;
+	  display: flex;
+	  gap: 20px;
+	}
+
+	.menu li {
+	  position: relative;
+	}
+
+	.menu a {
+	  text-decoration: none;
+	  color: #333;
+	  padding: 8px 12px;
+	}
+
+	.menu a.active {
+	  background: #333;
+	  color: white;
+	  border-radius: 4px;
+	}
+  
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial;
@@ -56,11 +99,51 @@ p {
   text-decoration: none;
   margin-top: 20px;
 }
+
+/* ===== NOVO FOOTER ===== */
+footer {
+  background: #eee;
+  text-align: center;
+  padding: 30px 20px;
+  font-size: 16px;
+  color: #555;
+  margin-top: 60px;
+}	
+
+  
 </style>
 </head>
 
 <body>
 
+    <!-- ===== MENU ===== -->
+	<header class="navbar">
+	  <div class="logo">
+		  <a href="index.html">
+			<img src="img/flura-logo.png" alt="Flura Logo">
+		  </a>
+	  </div>
+
+	  <nav>
+		<ul class="menu">
+		  <li><a href="index.html" class="active">Home</a></li>
+		  <li><a href="flura-quem-somos.html">Quem somos</a></li>
+		  <li><a href="flura-solucoes.html">Soluções</a></li>
+		  <li><a href="flura-quiz.html">Quiz</a></li>
+
+  		<!-- ===== TOPO NOVO =====
+		  <li class="dropdown">
+			<a href="flura-quiz.html">Quiz ▾</a>
+			<ul class="dropdown-menu">
+			  <li><a href="flura-quiz-responder.html">Responder</a></li>
+			</ul>
+		  </li>
+ 		-->
+		  <li><a href="/ecommerce/">E-Commerce</a></li>
+		</ul>
+	  </nav>
+	</header>
+  
 <!-- ABERTURA -->
 <section class="section">
   <div class="container center">
@@ -194,9 +277,10 @@ p {
   </div>
 </section>
 
-<footer class="center" style="padding:40px; color:#777;">
-  Flura © 2026 — Feito para fluir com você
-</footer>
+  <!-- ===== FOOTER NOVO ===== -->
+  <footer>
+    © Flura — Neurodiversidade com propósito
+  </footer>  
 
 </body>
 </html>
